@@ -30,7 +30,7 @@ $color1:#A64CCB;
 
 body{
    font-family: montserrat;
-   font-size: 22px;
+   font-size: 16px;
    font-weight: 400;
 }
 
@@ -41,7 +41,7 @@ body{
    width: 100%;
    z-index: 100;
    top: 30px;
-   @media (max-width:1000px) {
+   @media (max-width:1320px) {
       top: 10px;
    }
    &__container {
@@ -50,7 +50,7 @@ body{
       display: grid;
       grid-template-columns: 164px auto 164px;
       margin: 0 auto;
-      @media (max-width:1000px) {
+      @media (max-width:1320px) {
          grid-template-columns: 100px auto 100px;
       }
    }
@@ -60,7 +60,7 @@ body{
       display: grid;
       grid-template-columns:144px 20px auto ;
       align-items: center;
-      @media (max-width:1000px) {
+      @media (max-width:1320px) {
          grid-column: 1/4;
          grid-template-columns:80px 20px auto ;
       }
@@ -81,7 +81,7 @@ body{
       z-index: 2;
       img{
          width: calc(100% - 64px);
-         @media (max-width:1000px) {
+         @media (max-width:1320px) {
             width: calc(100% - 20px);
          }
       }
@@ -95,7 +95,7 @@ body{
       box-shadow: 5px 0 25px rgba( 0, 0,0,0.1);
       position: relative;
       background-color: #ffffff;
-      @media (max-width:1000px) {
+      @media (max-width:1320px) {
          padding: 0 10px 0 30px;
          display: flex;
          justify-content: end;
@@ -104,9 +104,9 @@ body{
    &__links{
       display: flex;
       justify-content: space-evenly;
-      gap: 30px;
+      gap: 20px;
       flex-wrap: wrap;
-      @media (max-width:1000px) {
+      @media (max-width:1320px) {
          position: absolute;
          flex-direction: column;
          top: calc(100% + 20px);
@@ -121,7 +121,7 @@ body{
    &__link {
       text-transform: uppercase;
       font-weight: 500;
-      font-size: 16px;
+      font-size: 12px;
       transition: .1s;
       &:hover{
          font-weight: 700;
@@ -157,7 +157,7 @@ body{
             transform: translate3d(0,9px,0);
          }
       }
-      @media (max-width:1000px) {
+      @media (max-width:1320px) {
          display: inline-block;
       }
    }
@@ -194,57 +194,16 @@ body{
    }
 }
 
-.intro {
-   display: flex;
-   padding: 236px 0px 100px 0;
-   background: url(../img/intro/fon.png) no-repeat center / cover;
-   align-items: center;
-   &__in {
-      min-width: 100%;
-   }
-
-   &__inner {
-      max-width: 50%;
-   }
-
-   &__block {
-   }
-
-   &__title {
-      margin: 0px 0px 50px 0px;
-      font-weight: 800;
-      font-size: 60px;
-   }
-
-   &__subtitle {
-      margin: 0px 0px 50px 0px;
-
-   }
-
-   &__btn {
-      width: 357px;
-   }
-
-   &__img {
-      flex:0 0 50%;
-      transform: translateX(-100%);
-      background: transparent;
-      img{
-         width: 100%;
-      }
-   }
-}
-
 .btn {
-   border-radius: 30px;
+   border-radius: 20px;
    background: linear-gradient(90deg, #C28DD8,#A64CCB);
    text-transform: uppercase;
    color: #ffffff;
-   height: 100px;
+   height: 70px;
    display: flex;
    align-items: center;
    justify-content: center;
-   font-size: 24px;
+   font-size: 16px;
    position: relative;
    transition: .3;
    overflow: hidden;
@@ -270,6 +229,92 @@ body{
       color: $color1;
       &::after{
          transform: translateY(0);
+      }
+   }
+}
+
+.intro {
+   display: flex;
+   padding: 236px 0px 100px 0;
+   background: url(../img/intro/fon.png) no-repeat center / cover;
+   align-items: center;
+   &__in {
+      min-width: 100%;
+   }
+
+   &__inner {
+      max-width: 50%;
+   }
+
+   &__block {
+   }
+
+   &__title {
+      margin: 0px 0px 50px 0px;
+      font-weight: 800;
+      font-size: 50px;
+      max-width: 600px;
+   }
+
+   &__subtitle {
+      margin: 0px 0px 50px 0px;
+      max-width: 430px;
+   }
+
+   &__btn {
+      width: 207px;
+   }
+
+   &__img {
+      flex:0 0 50%;
+      transform: translateX(-100%);
+      background: transparent;
+      img{
+         width: 100%;
+      }
+   }
+}
+
+
+
+.demo {
+   display: flex;
+   padding: 130px 0px 130px 0;
+   background: url(../img/demo/fon.png) no-repeat center / cover;
+   align-items: center;
+   &__in {
+      min-width: 100%;
+   }
+
+   &__inner {
+      max-width: 50%;
+   }
+
+   &__block {
+   }
+
+   &__title {
+      margin: 0px 0px 50px 0px;
+      font-weight: 800;
+      font-size: 50px;
+      max-width: 600px;
+   }
+
+   &__subtitle {
+      margin: 0px 0px 50px 0px;
+      max-width: 430px;
+   }
+
+   &__btn {
+      width: 350px;
+   }
+
+   &__img {
+      flex:0 0 50%;
+      transform: translateX(-100%);
+      background: transparent;
+      img{
+         width: 100%;
       }
    }
 }

@@ -10,3 +10,9 @@ if(burger){
       }
    })
 }
+window.addEventListener('resize',event=>{
+   if(document.body.classList.contains('_burgerOpen')){
+      document.body.classList.remove('_burgerOpen')
+      document.body.style.overflow='';
+   }
+})
