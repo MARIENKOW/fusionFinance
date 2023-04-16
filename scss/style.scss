@@ -8,7 +8,7 @@ input,button,textarea{font-family:inherit;}
 input::-ms-clear{display: none;}
 button{cursor: pointer;}
 button::-moz-focus-inner {padding:0;border:0;}
-a, a:visited{text-decoration: none;}
+a, a:visited{text-decoration: none;color:#000;}
 a:hover{text-decoration: none;}
 ul,ol,li{list-style: none;}
 img{vertical-align: top;}
@@ -48,7 +48,7 @@ $addSize: $startSize - $minSize;
 }
 
 .container {
-   max-width: 1300px;
+   max-width: 1112px;
    padding: 0px 10px;
    margin: 0 auto;
 }
@@ -474,6 +474,191 @@ body{
    }
 }
 
+.destinations {
+   background: url(../img/destinations/fon.png) center / cover no-repeat;
+   padding: 200px 0px 50px 0px;
+   @media (max-width:756px) {
+      padding: 70px 0px 0px 0px;
+   }
+
+   &__inner {
+   }
+
+   &__title {
+      @include adaptiv-value('font-size',50 ,35 ,1 );
+      font-weight: 800;
+      margin: 0px 0px 45px 0px;
+   }
+
+   &__main {
+   }
+
+   &__spoiler {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      row-gap: 35px;
+      column-gap: 75px;
+      @media (max-width:756px) {
+         display: flex;
+         gap: 20px;
+         width: 100%;
+         overflow: scroll;
+         padding: 30px 0px;
+         &::-webkit-scrollbar {
+            width: 0;
+         }
+      }
+   }
+
+   &__block {
+      display: grid;
+      grid-template-rows: 60px auto 55px;
+      @media (max-width:756px) {
+         min-width: 85%;
+         border-radius: 20px;
+         background-color: #fff;
+         box-shadow: 5px 0 25px rgba( 0, 0,0,0.1);
+         padding: 10px 20px;
+      }
+   }
+
+   &__subtitle {
+      font-size: 20px;
+      font-weight: 700;
+   }
+
+   &__text {
+   }
+
+   &__link {
+      font-size: 20px;
+      color: $color1 !important;
+      display: inline-flex;
+      gap: 15px;
+      align-items: start;
+      align-self:end;
+      transition: .2s;
+      justify-self: start;
+      &:hover{
+         color: #000000 !important;
+         span{
+            &:last-child{
+               use{
+                  stroke:#504f4f !important;
+               }
+            }
+         }
+      }
+      span{
+         &:last-child{
+            padding: 2px 0px 0px 0px;
+            use{
+               stroke:$color1 !important;
+            }
+         }
+      }
+   }
+
+   &__svg {
+      width: 27px;
+      height: 18px;
+   }
+}
+
+.about {
+   background: url(../img/about/fon.png) center / cover no-repeat;
+   padding: 200px 0px 50px 0px;
+   @media (max-width:756px) {
+      padding: 70px 0px 0px 0px;
+   }
+
+   &__inner {
+   }
+
+   &__title {
+      @include adaptiv-value('font-size',50 ,35 ,1 );
+      font-weight: 800;
+      margin: 0px 0px 45px 0px;
+   }
+
+   &__main {
+   }
+
+   &__spoiler {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      row-gap: 55px;
+      column-gap: 150px;
+      @media (max-width:756px) {
+         display: flex;
+         gap: 20px;
+         width: 100%;
+         overflow: scroll;
+         padding: 30px 0px;
+         &::-webkit-scrollbar {
+            width: 0;
+         }
+      }
+   }
+
+   &__block {
+      display: grid;
+      grid-template-rows: 60px auto 55px;
+      @media (max-width:756px) {
+         min-width: 85%;
+         border-radius: 20px;
+         background-color: #fff;
+         box-shadow: 5px 0 25px rgba( 0, 0,0,0.1);
+         padding: 10px 20px;
+      }
+   }
+
+   &__subtitle {
+      font-size: 20px;
+      font-weight: 700;
+   }
+
+   &__text {
+   }
+
+   &__link {
+      font-size: 20px;
+      color: $color1 !important;
+      display: inline-flex;
+      gap: 15px;
+      align-items: start;
+      align-self:end;
+      transition: .2s;
+      justify-self: start;
+      &:hover{
+         color: #000000 !important;
+         span{
+            &:last-child{
+               use{
+                  stroke:#504f4f !important;
+               }
+            }
+         }
+      }
+      span{
+         &:last-child{
+            padding: 2px 0px 0px 0px;
+            use{
+               stroke:$color1 !important;
+            }
+         }
+      }
+   }
+
+   &__svg {
+      width: 27px;
+      height: 18px;
+   }
+}
+
+
+
+
 .contacts {
    padding: 120px 0px 60px 0px;
    background: url(../img/contacts/fon.png) center / cover no-repeat;
@@ -570,7 +755,6 @@ body{
    }
 }
 
-
 .footer {
    color: #ffffff;
    &__main {
@@ -581,10 +765,10 @@ body{
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 55px 0px;
+      padding: 25px 0px;
       @media (max-width:800px) {
          flex-direction: column;
-         padding: 30px 0px;
+         padding: 20px 0px;
       }
    }
 
@@ -607,7 +791,7 @@ body{
       text-align: center;
       font-size: 12px;
       margin: 0px 0px 14px 0px;
-      color: #fff;
+      color: #fff !important;
       &:hover{
          color: #c28dd8 !important;
       }
@@ -617,7 +801,7 @@ body{
       text-align: center;
       font-size: 12px;
       margin: 0px 0px 40px 0px;
-      color: #fff;
+      color: #fff !important;
       &:hover{
          color: #c28dd8 !important;
       }
@@ -678,7 +862,7 @@ body{
       }
    }
    &__link{
-      color: #fff;
+      color: #fff !important;
       position: relative;
       &:hover{
          &::after{
@@ -748,7 +932,7 @@ body{
 
    &__mobileLink {
       text-align: center;
-      color: #fff;
+      color: #fff !important;
       text-transform: uppercase;
    }
 
