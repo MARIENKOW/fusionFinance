@@ -122,7 +122,7 @@ body{
       text-transform: uppercase;
       font-weight: 500;
       font-size: 16px;
-      transition: .2s;
+      transition: .1s;
       &:hover{
          font-weight: 700;
       }
@@ -248,7 +248,6 @@ body{
    position: relative;
    transition: .3;
    overflow: hidden;
-   border: 3px solid transparent;
    font-weight: 700;
    span{
       position: relative;
