@@ -54,3 +54,5 @@ function spoilerFlex() {
 }
 
 spoilerFlex();
+spoilerFlex();
+window.addEventListener('resize',spoilerFlex)

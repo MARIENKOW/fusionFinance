@@ -344,8 +344,6 @@ body{
    }
 }
 
-
-
 .demo {
    display: flex;
    padding: 130px 0px 130px 0;
@@ -490,6 +488,7 @@ body{
       margin: 0px 0px 45px 0px;
       @media (max-width:756px) {
          margin: 0px 0px 20px 0px;
+         text-align: center;
       }
    }
 
@@ -568,6 +567,111 @@ body{
    }
 }
 
+.tools {
+   background: url(../img/tools/fon.png) center / cover no-repeat;
+   padding: 190px 0px 90px 0px;
+   &__inner {
+   }
+
+   &__title {
+      @include adaptiv-value('font-size',50 ,35 ,1 );
+      margin: 0px 0px 65px 0px;
+      font-weight: 900;
+      @media (max-width:920px) {
+         text-align: center;
+      }
+   }
+
+   &__main {
+      display: flex;
+      gap: 30px;
+      justify-content: space-between;
+      @media (max-width:1200px) {
+         padding: 0px 0px 0px 40px;
+         
+      }
+      @media (max-width:920px) {
+         padding: 0px 0px 0px 0px;
+         flex-direction: column;
+         gap: 20px;
+      }
+   }
+
+   &__block {
+      flex: 0 1 310px;
+      @media (max-width:920px) {
+         flex: auto;
+         padding: 0px 10px 0 10px;
+         display: flex;
+         flex-direction: column;
+      }
+   }
+
+   &__subtitle {
+      color: $color1;
+      font-size: 18px;
+      font-weight: 700;
+      position: relative;
+      margin: 0px 0px 70px 0px;
+      z-index: 1;
+      @media (max-width:920px) {
+         margin: 0px 0px;
+         padding: 20px 20px 20px 55px;
+         border-radius: 20px;
+         background: linear-gradient(90deg, #C28DD8,#A64CCB);
+         color: #fff;
+         font-weight: 600;
+      }
+      span{
+         white-space: nowrap;
+         @media (max-width:920px) {
+            white-space: normal;
+         }
+      }
+   }
+
+   &__icon {
+      position: absolute;
+      width: 38px;
+      height: 35px;
+      top: 50%;
+      right: calc(100% + 10px);
+      transform: translateY(-50%);
+      @media (max-width:920px) {
+         right: auto;
+         left: 15px;
+         width: 30px;
+         height: 25px;
+      }
+   }
+
+   &__svg {
+      width: 100%;
+      height: 100%;
+      fill: $color1 !important;
+      @media (max-width:920px) {
+         fill: #fff !important;
+      }
+   }
+
+   &__text {
+      text-align: left;
+      @media (max-width:920px) {
+         background-color: #c28dd8;
+         position: relative;
+         top: -20px;
+         border-radius: 0 0 15px 15px;
+      }
+      span{
+         @media (max-width:920px) {
+            display: inline-block;
+            padding: 35px 20px 15px 20px;
+            color: #fff;
+         }
+      }
+   }
+}
+
 .about {
    background: url(../img/about/fon.png) center / cover no-repeat;
    padding: 200px 0px 50px 0px;
@@ -584,6 +688,7 @@ body{
       margin: 0px 0px 45px 0px;
       @media (max-width:756px) {
          margin: 0px 0px 20px 0px;
+         text-align: center;
       }
    }
 
@@ -675,7 +780,7 @@ body{
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 40px;
-      padding: 0px 96px 0px 0px;
+      padding: 0px 0px 0px 0px;
       margin: 0px 0px 90px 0px;
       @media (max-width:756px) {
          gap: 15px;
@@ -723,7 +828,7 @@ body{
 
    &__mail {
       transition: .2s;
-      color: #fff;
+      color: #000000;
       &:hover{
          color: $color1;
       }
