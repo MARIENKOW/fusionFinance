@@ -488,6 +488,9 @@ body{
       @include adaptiv-value('font-size',50 ,35 ,1 );
       font-weight: 800;
       margin: 0px 0px 45px 0px;
+      @media (max-width:756px) {
+         margin: 0px 0px 20px 0px;
+      }
    }
 
    &__main {
@@ -518,7 +521,7 @@ body{
          border-radius: 20px;
          background-color: #fff;
          box-shadow: 5px 0 25px rgba( 0, 0,0,0.1);
-         padding: 10px 20px;
+         padding: 35px 20px 20px 20px;
       }
    }
 
@@ -579,6 +582,9 @@ body{
       @include adaptiv-value('font-size',50 ,35 ,1 );
       font-weight: 800;
       margin: 0px 0px 45px 0px;
+      @media (max-width:756px) {
+         margin: 0px 0px 20px 0px;
+      }
    }
 
    &__main {
@@ -609,7 +615,7 @@ body{
          border-radius: 20px;
          background-color: #fff;
          box-shadow: 5px 0 25px rgba( 0, 0,0,0.1);
-         padding: 10px 20px;
+         padding: 35px 20px 20px 20px;
       }
    }
 
@@ -655,9 +661,6 @@ body{
       height: 18px;
    }
 }
-
-
-
 
 .contacts {
    padding: 120px 0px 60px 0px;
