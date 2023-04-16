@@ -22,6 +22,31 @@ input[type='number'],input[type="number"]:hover,input[type="number"]:focus {appe
 /*! ______ОБНУЛЕНИЕ______ */
 $color1:#A64CCB;
 
+$maxWidth: 1920;
+$maxWidthContainer: 956;
+
+@mixin adaptiv-value($property, $startSize, $minSize, $type) {
+$addSize: $startSize - $minSize;
+@if $type==1 {
+// МЕНЬШЕ КОНТЕЙНЕРА
+#{$property}:$startSize + px;
+@media (max-width: #{$maxWidthContainer + px}) {
+#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}));
+}
+}
+@else if $type==2 {
+// БОЛЬШЕ КОНТЕЙНЕРА
+#{$property}:$startSize + px;
+@media (min-width: #{$maxWidthContainer + px}) {
+#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+}
+}
+@else {
+//ВСЕГДА
+#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+}
+}
+
 .container {
    max-width: 1300px;
    padding: 0px 10px;
@@ -40,7 +65,7 @@ body{
    left: 0;
    width: 100%;
    z-index: 100;
-   top: 30px;
+   top: 20px;
    @media (max-width:1320px) {
       top: 10px;
    }
@@ -50,18 +75,32 @@ body{
       display: grid;
       grid-template-columns: 164px auto 164px;
       margin: 0 auto;
+      position: relative;
+      &::after{
+         position: absolute;
+         content: '';
+         top: -25px;
+         left: -10px;
+         width: calc(100% + 20px);
+         height: calc(50% + 30px);
+         backdrop-filter: blur(10px);
+         z-index: 1;
+         background: linear-gradient(135deg, rgba(113,49,156,0.2) 0%, rgba(177,30,30,0.2) 37%, rgba(180,125,49,0.2) 67%, rgba(186,187,63,0.2) 96%);
+         border-radius: 0 0 99px 99px;
+      }
       @media (max-width:1320px) {
          grid-template-columns: 100px auto 100px;
       }
    }
 
    &__inner {
-      grid-column: 1 / 3;
+      grid-column: 1 / 4;
       display: grid;
       grid-template-columns:144px 20px auto ;
       align-items: center;
+      position: relative;
+      z-index: 2;
       @media (max-width:1320px) {
-         grid-column: 1/4;
          grid-template-columns:80px 20px auto ;
       }
    }
@@ -208,6 +247,12 @@ body{
    transition: .3;
    overflow: hidden;
    font-weight: 700;
+   width: 100%;
+   @media (max-width:956px) {
+      height: 50px;
+      font-size: 13px;
+      font-weight: 600;
+   }
    span{
       position: relative;
       z-index: 2;
@@ -238,22 +283,36 @@ body{
    padding: 236px 0px 100px 0;
    background: url(../img/intro/fon.png) no-repeat center / cover;
    align-items: center;
+   @media (max-width:956px) {
+      flex-direction: column;
+      padding: 100px 0px 40px 0px;
+   }
    &__in {
       min-width: 100%;
    }
 
    &__inner {
       max-width: 50%;
+      @media (max-width:956px) {
+         max-width: 100%;
+      }
    }
 
    &__block {
+      @media (max-width:956px) {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         text-align: center;
+      }
    }
 
    &__title {
       margin: 0px 0px 50px 0px;
       font-weight: 800;
-      font-size: 50px;
+      @include adaptiv-value('font-size',50 ,30 ,1 );
       max-width: 600px;
+      margin: 30px 0px 30px 0px;
    }
 
    &__subtitle {
@@ -262,7 +321,7 @@ body{
    }
 
    &__btn {
-      width: 207px;
+      max-width: 207px;
    }
 
    &__img {
@@ -271,6 +330,11 @@ body{
       background: transparent;
       img{
          width: 100%;
+      }
+      @media (max-width:956px) {
+         flex:0 0 100%;
+         order: -1;
+         transform: translateX(0);
       }
    }
 }
@@ -282,22 +346,36 @@ body{
    padding: 130px 0px 130px 0;
    background: url(../img/demo/fon.png) no-repeat center / cover;
    align-items: center;
+   @media (max-width:956px) {
+      flex-direction: column;
+      padding: 100px 0px;
+   }
    &__in {
       min-width: 100%;
    }
 
    &__inner {
       max-width: 50%;
+      @media (max-width:956px) {
+         max-width: 100%;
+      }
    }
 
    &__block {
+      @media (max-width:956px) {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         text-align: center;
+      }
    }
 
    &__title {
       margin: 0px 0px 50px 0px;
       font-weight: 800;
-      font-size: 50px;
+      @include adaptiv-value('font-size',50 ,35 ,1 );
       max-width: 600px;
+      margin: 20px 0px 30px 0px;
    }
 
    &__subtitle {
@@ -306,7 +384,7 @@ body{
    }
 
    &__btn {
-      width: 350px;
+      max-width: 350px;
    }
 
    &__img {
@@ -315,6 +393,11 @@ body{
       background: transparent;
       img{
          width: 100%;
+      }
+      @media (max-width:956px) {
+         flex:0 0 100%;
+         order: -1;
+         transform: translateX(0);
       }
    }
 }
