@@ -1033,7 +1033,7 @@ body {
 }
 @media (max-width: 756px) {
   .contacts__main {
-    gap: 15px;
+    gap: 35px;
     padding: 0px 0px;
     margin: 0px 0px 40px 0px;
   }
@@ -1050,19 +1050,49 @@ body {
     font-size: calc(35px + 15 * ((100vw - 320px) / 636));
   }
 }
+.contacts__wrapper {
+  position: relative;
+}
+@media (max-width: 756px) {
+  .contacts__wrapper {
+    grid-column: 1/3;
+  }
+}
+.contacts__wrapper::after {
+  display: none;
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  width: 100%;
+  color: red;
+  padding: 5px 20px 20px 10px;
+  font-size: 12px;
+}
+.contacts__wrapper--name::after {
+  content: "Введите имя";
+}
+.contacts__wrapper--mail::after {
+  content: "Введите email формата: user@exemple.com";
+}
+.contacts__wrapper--surname::after {
+  content: "Введите фамилию";
+}
+.contacts__wrapper--phone::after {
+  content: "введите номер формата: +7";
+}
+.contacts__wrapper--question {
+  grid-column: 1/3;
+}
+.contacts__wrapper--question::after {
+  content: "Введите запрос (мин кол-во символов:15)";
+}
 .contacts__input {
   border: 1px solid #C0C0C0;
   color: #000000;
   border-radius: 10px;
   padding: 15px 20px;
-}
-@media (max-width: 756px) {
-  .contacts__input {
-    grid-column: 1/3;
-  }
-}
-.contacts__input--question {
-  grid-column: 1/3;
+  width: 100%;
 }
 .contacts__bottom {
   display: -webkit-box;
@@ -1135,6 +1165,12 @@ body {
   }
 }
 
+._badInput input {
+  border-color: red;
+}
+._badInput::after {
+  display: inline-block;
+}
 .footer {
   color: #ffffff;
 }

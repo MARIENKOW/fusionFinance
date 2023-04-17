@@ -783,7 +783,7 @@ body{
       padding: 0px 0px 0px 0px;
       margin: 0px 0px 90px 0px;
       @media (max-width:756px) {
-         gap: 15px;
+         gap: 35px;
          padding: 0px 0px;
          margin: 0px 0px 40px 0px;
       }
@@ -797,17 +797,57 @@ body{
       margin: 0px 0px 70px 0px;
    }
    
+   &__wrapper{
+      position: relative;
+      @media (max-width:756px) {
+         grid-column: 1 / 3;
+      }
+      &::after{
+         display: none;
+         content: '';
+         position: absolute;
+         top: 100%;
+         left: 0px;
+         width: 100%;
+         color: red;
+         padding: 5px 20px 20px 10px;
+         font-size: 12px;
+      }
+      &--name{
+         &::after{
+            content: 'Введите имя';
+         }
+      }
+      &--mail{
+         &::after{
+            content: 'Введите email формата: user@exemple.com';
+         }
+      }
+      &--surname{
+         &::after{
+            content: 'Введите фамилию';
+         }
+      }
+      &--phone{
+         &::after{
+            content: 'введите номер формата: +7';
+         }
+      }
+      &--question{
+         grid-column: 1 / 3;
+         &::after{
+            content: 'Введите запрос (мин кол-во символов:15)';
+         }
+      }
+   }
+
    &__input{
       border: 1px solid #C0C0C0;
       color: #000000;
       border-radius: 10px;
       padding: 15px 20px;
-      @media (max-width:756px) {
-         grid-column: 1 / 3;
-      }
-      &--question{
-         grid-column: 1 / 3;
-      }
+      // display: inline-block;
+      width: 100%;
    }
    &__bottom {
       display: flex;
@@ -860,6 +900,18 @@ body{
          margin: 0px 20px 0px 0px;
          font-size: 25px;
       }
+   }
+}
+
+._badInput{
+   input{
+      border-color: red;
+   }
+   &::after{
+      display: inline-block;
+   }
+   .contacts__input{
+
    }
 }
 

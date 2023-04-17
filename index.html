@@ -275,14 +275,24 @@
                <form action="#" class="contacts__form">
                   <section class="contacts__main">
                      <h1 class="contacts__title">Contact us</h1>
-                     <input class="contacts__input" placeholder="Your Name" type="text">
-                     <input class="contacts__input" placeholder="Email" type="email">
-                     <input class="contacts__input" placeholder="Surname" type="text">
-                     <input class="contacts__input" placeholder="Phone" type="tel">
-                     <input class="contacts__input contacts__input--question" placeholder="Your question" type="text">
+                     <span class="contacts__wrapper contacts__wrapper--name">
+                        <input data-type = 'name' class="contacts__input" placeholder="Your Name" type="text">
+                     </span>
+                     <span class="contacts__wrapper contacts__wrapper--mail">
+                        <input data-type = 'mail' class="contacts__input" placeholder="Email" type="email">
+                     </span>
+                     <span class="contacts__wrapper contacts__wrapper--surname">
+                        <input data-type = 'surname' class="contacts__input" placeholder="Surname" type="text">
+                     </span>
+                     <span class="contacts__wrapper contacts__wrapper--phone">
+                        <input data-type = 'phone' class="contacts__input" placeholder="Phone" type="number">
+                     </span>
+                     <span class="contacts__wrapper contacts__wrapper--question">
+                        <input data-type = 'question' class="contacts__input contacts__input--question" placeholder="Phone" type="text">
+                     </span>
                   </section>
                   <section class="contacts__bottom">
-                     <button class="btn contacts__btn"><span>send</span></button>
+                     <button class="_ajaxFormSend btn contacts__btn"><span>send</span></button>
                      <div class="contacts__personal">
                         <a href="mailto:info@suntex.io" class="contacts__mail">info@suntex.io</a>
                         <div class="contacts__phone">
