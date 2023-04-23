@@ -1070,22 +1070,22 @@ body {
   font-size: 12px;
 }
 .contacts__wrapper--name::after {
-  content: "Введите имя";
+  content: "Enter your name";
 }
 .contacts__wrapper--mail::after {
-  content: "Введите email формата: user@exemple.com";
+  content: "Enter email format: user@exemple.com";
 }
 .contacts__wrapper--surname::after {
-  content: "Введите фамилию";
+  content: "Enter your surname";
 }
 .contacts__wrapper--phone::after {
-  content: "введите номер формата: +7";
+  content: "enter format number: +1";
 }
 .contacts__wrapper--question {
   grid-column: 1/3;
 }
 .contacts__wrapper--question::after {
-  content: "Введите запрос (мин кол-во символов:15)";
+  content: "Enter your query (min characters: 15)";
 }
 .contacts__input {
   border: 1px solid #C0C0C0;

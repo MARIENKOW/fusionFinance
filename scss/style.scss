@@ -815,28 +815,28 @@ body{
       }
       &--name{
          &::after{
-            content: 'Введите имя';
+            content: 'Enter your name';
          }
       }
       &--mail{
          &::after{
-            content: 'Введите email формата: user@exemple.com';
+            content: 'Enter email format: user@exemple.com';
          }
       }
       &--surname{
          &::after{
-            content: 'Введите фамилию';
+            content: 'Enter your surname';
          }
       }
       &--phone{
          &::after{
-            content: 'введите номер формата: +7';
+            content: 'enter format number: +1';
          }
       }
       &--question{
          grid-column: 1 / 3;
          &::after{
-            content: 'Введите запрос (мин кол-во символов:15)';
+            content: 'Enter your query (min characters: 15)';
          }
       }
    }
